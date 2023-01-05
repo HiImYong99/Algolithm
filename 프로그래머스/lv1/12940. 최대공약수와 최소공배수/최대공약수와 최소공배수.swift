@@ -11,13 +11,11 @@ func gcd(n:Int, m:Int) -> Int {
 }
 
 func lcm(n:Int, m:Int) -> Int {
-    var lcm = 1
-    lcm = gcd(n: n, m: m) * (n / gcd(n: n, m: m)) * (m / gcd(n: n, m: m))
-    return lcm
+    return n * m / gcd(n: n, m: m)
 }
 
 func solution(_ n:Int, _ m:Int) -> [Int] {
-    return [gcd(n: n, m: m),lcm(n: n, m: m)]
+    return [gcd(n: n, m: m), lcm(n: n, m: m)]
 }
 
 
