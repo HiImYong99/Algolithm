@@ -1,6 +1,2 @@
 def solution(n):
-    answer = []
-    for i in range(1, n+1):
-        if i * (n//i) == n:
-            answer.append(i)
-    return len(answer)
+    return len([x for x in range(1, n+1) if x * (n // x) == n])
