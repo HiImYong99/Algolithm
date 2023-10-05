@@ -1,15 +1,9 @@
 def solution(hp):
     answer = 0
+    atk = [5,3,1]
     
-    if hp >= 5:
-        answer += (hp // 5)
-        hp %= 5
-        
-    if hp >= 3:
-        answer += (hp // 3)
-        hp %= 3
-        
-    if hp >= 1:
-        answer += (hp // 1)
-        
+    for a in atk:
+        answer += (hp // a)
+        hp %= a
+
     return answer
